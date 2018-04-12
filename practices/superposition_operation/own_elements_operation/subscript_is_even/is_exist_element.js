@@ -8,9 +8,6 @@ var is_exist_element = function(collection,element){
     }
   }
   result = tempArr.includes(element)
-  if(element == 4){
-    result = !result
-  }
   console.log(result)
   return result
 };
