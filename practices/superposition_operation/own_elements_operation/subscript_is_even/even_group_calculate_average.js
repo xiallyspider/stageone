@@ -9,7 +9,6 @@ var even_group_calculate_average = function(collection){
             even.push(collection[x])
         }
     }
-    console.log("偶数位数组"+even)
     let evenArr = even.filter(function(item){
         return item%2 == 0
     })
@@ -18,11 +17,8 @@ var even_group_calculate_average = function(collection){
         return a-b
     })
     if(evenArr.length != 0){
-        console.log("偶数位为偶数的数组"+evenArr)
         let maxMunber = evenArr[evenArr.length-1]
-        console.log("最大数"+maxMunber)
         let forRuntim = maxMunber.toString().split("").length
-        console.log("循环次数"+forRuntim)
         for(let y = 1;y <= forRuntim ; y++){
             let resultArr = evenArr.filter(function(item){
                 return item.toString().split("").length == y
@@ -35,7 +31,6 @@ var even_group_calculate_average = function(collection){
             })
             result.push(sum/dArr[2].length)
         } else {
-        console.log("meijinr")
             for (let i =0;i< dArr.length;i++){
                 let eachArrSum = dArr[i].reduce(function(a,b){
                     return a+b
@@ -46,7 +41,6 @@ var even_group_calculate_average = function(collection){
     } else {
         result.push(0)
     }
-    console.log(result)
     return result
 }
 

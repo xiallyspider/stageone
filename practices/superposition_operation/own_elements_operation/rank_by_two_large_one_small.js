@@ -22,7 +22,6 @@ function rank_by_two_large_one_small(collection){
   result=doubDrecArr.reduce(function(a,b){
   return a.concat(b);
   },[]);
-  console.log(result)
   return result; 
 }
 module.exports = rank_by_two_large_one_small;

@@ -8,14 +8,12 @@ function count_same_elements(collection) {
   if(collection[x].includes('-') || collection[x].includes(':')){
     let num = parseInt(collection[x].slice(2,3))
     let letter = collection[x].slice(0,1)
-    console.log(num)
     for( let y = 0; y < num; y++){
       tempArr.push(letter)
     }
   } else if( collection[x].includes('[')){
     let num = parseInt(collection[x].slice(2,-1))
     let letter = collection[x].slice(0,1)
-    console.log(num)
     for( let y = 0; y < num; y++){
       tempArr.push(letter)
     }
@@ -23,7 +21,6 @@ function count_same_elements(collection) {
     tempArr.push(collection[x])
   }
   }
-  console.log(tempArr)
   // 统计数组
   let countNumObj = tempArr.reduce(function(counts,item){
   if (item in counts){
@@ -33,12 +30,10 @@ function count_same_elements(collection) {
   }
   return counts
   },{})
-    console.log(countNumObj)
   let countNum = []
   for( let key in countNumObj){
-  countNum.push({'name':key, 'summary':countNumObj[key]})
+    countNum.push({'name':key, 'summary':countNumObj[key]})
   }
-  console.log(countNum)
   return countNum
 }
 

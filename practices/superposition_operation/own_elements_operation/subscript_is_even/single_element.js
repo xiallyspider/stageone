@@ -11,11 +11,10 @@ var single_element = function(collection){
       return item == evenPos[x]
       })
   len = tempArr.length
-  if (len == 1) {
-    singleEleArr.push(evenPos[x])
+    if (len == 1) {
+      singleEleArr.push(evenPos[x])
+    }
   }
-  }
-  console.log(singleEleArr)
   return singleEleArr
 };
 module.exports = single_element;

@@ -16,7 +16,6 @@ var even_asc_odd_desc = function(collection){
   })
   
   result = evenArr.concat(odArr)
-  console.log(result)
   return result
 };
 module.exports = even_asc_odd_desc;

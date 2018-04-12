@@ -12,27 +12,26 @@ function create_updated_collection(collection_a, object_b) {
     let stringArr = tempArr[x].split("")
     let index = 0
     for (let z = 0; z < stringArr.length; z++){
-    if(stringArr[z] == '-'){
-      index = z
-    }
+      if(stringArr[z] == '-'){
+        index = z
+      }
     }
     result.push({'key':stringArr[index-1],'count':parseInt(stringArr[index+1])}) 
-  } else {
-    let subArr = collection_a.filter(function(item){ 
-    return item == tempArr[x] 
-    }) 
-    result.push({'key':tempArr[x],'count':subArr.length}) 
-  }
+    } else {
+      let subArr = collection_a.filter(function(item){ 
+      return item == tempArr[x] 
+      }) 
+      result.push({'key':tempArr[x],'count':subArr.length}) 
+    }
   }
   let arrB = object_b.value
   for (let x = 0; x < result.length; x++){
-  for (let y = 0; y < arrB.length; y++){
-    if(result[x].key == arrB[y]){
-    result[x].count -= parseInt(result[x].count/3)
+    for (let y = 0; y < arrB.length; y++){
+      if(result[x].key == arrB[y]){
+      result[x].count -= parseInt(result[x].count/3)
+      }
     }
   }
-  }
-  console.log(result)
   return result
 }
 

@@ -9,7 +9,6 @@ function get_letter_interval_2(number_a, number_b) {
     array1.push(tempData)
     resultArray.push(tempData)
   }
-    console.log(array1)
   for(let x = 0; x < 2; x++){
     for(let y = 0; y < array1.length; y++){
       let i = array1[x] + array1[y]

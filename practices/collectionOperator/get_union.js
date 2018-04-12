@@ -16,7 +16,6 @@ function get_union(collection_a, collection_b) {
     result.push(temp)
   }
   }
-  console.log(result)
   return result
 }
 

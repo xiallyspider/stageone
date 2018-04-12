@@ -8,7 +8,6 @@ var is_exist_element = function(collection,element){
     }
   }
   result = tempArr.includes(element)
-  console.log(result)
   return result
 };
 module.exports = is_exist_element;
