@@ -1,18 +1,24 @@
 function collect_same_elements(collection_a, object_b) {
   //在这里写入代码
-  let result = []
+  // let result = []
+  // let arrA = []
+  // for (let i = 0; i < collection_a.length; i++){
+  //   arrA.push(collection_a[i].key)
+  // }
+  // let arrB = object_b.value
+  // for (let x = 0; x < arrA.length; x++){
+  //   for(let y = 0; y < arrB.length; y++) {
+  //     if(arrA[x] == arrB[y]){
+  //       result.push(arrA[x])
+  //     }
+  //   }
+  // }
   let arrA = []
-  for (let i = 0; i < collection_a.length; i++){
-    arrA.push(collection_a[i].key)
+  for(let x of collection_a){
+    arrA.push(x.key)
   }
   let arrB = object_b.value
-  for (let x = 0; x < arrA.length; x++){
-    for(let y = 0; y < arrB.length; y++) {
-      if(arrA[x] == arrB[y]){
-        result.push(arrA[x])
-      }
-    }
-  }
+  var result = arrA.filter(v => arrB.includes(v)) 
   return result
 }
 
